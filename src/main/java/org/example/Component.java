@@ -58,6 +58,28 @@ public class Component extends SparePart{
 
     }
 
+     @Override
+    public String toStringMap() {
+
+        StringBuilder sB = new StringBuilder(super.toString());
+        sB.appernd(", parts: ");
+
+        for(SparePart sP: parts.values){
+
+            sB.append("\n").append(sP.toString());
+
+        }
+
+        sB.append("\n");
+        return sB.toString();
+
+    }
+        
+        return "COMPONENTS:" +
+                "myComponents=" + mySpareParts;
+
+    }
+
     public String toJson(){
 
         Gson gson = new Gson();
